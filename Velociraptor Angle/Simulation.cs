@@ -25,9 +25,11 @@ public class Simulation
             _fred.CalculateNewPosition(TimeStep);
             _healthyVelociraptor.CalculateNewVelocity(TimeStep, _fred);
             _healthyVelociraptor.CalculateNewPosition(TimeStep);
+            _injuredVelociraptor.CalculateNewVelocity(TimeStep, _fred);
+            _injuredVelociraptor.CalculateNewPosition(TimeStep);
             _time += TimeStep;
             Console.WriteLine("h" + Utilities.GetDistanceBetween(_fred, _healthyVelociraptor));
-            Console.WriteLine("i" + Utilities.GetDistanceBetween(_fred, _injuredVelociraptor));
+            // Console.WriteLine("i" + Utilities.GetDistanceBetween(_fred, _injuredVelociraptor));
         }
         return _time;
     }
