@@ -16,10 +16,10 @@ public class Velociraptor : Character
     {
         var angle = GetAngleTo(target);
         double [] acceleration = new double[] {Acceleration * Math.Cos(angle), Acceleration * Math.Sin(angle)};
-        if(Utilities.GetMagnitude(acceleration) > MaxSpeed)
-        {
-            acceleration = new double[] {MaxSpeed * Math.Cos(angle), MaxSpeed * Math.Sin(angle)};
-        }
         Velocity = new double[] {Velocity[0] + acceleration[0] * timeStep, Velocity[1] + acceleration[1] * timeStep};
+        if(Utilities.GetMagnitude(Velocity) > MaxSpeed)
+        {
+            Velocity = new double[] {MaxSpeed * Math.Cos(angle), MaxSpeed * Math.Sin(angle)};
+        }
     }
 }
