@@ -4,7 +4,7 @@ public abstract class Character
 {
     public double[] Position; // x, y
     public double[] Velocity; // x, y
-    public double Acceleration; // x, y
+    public double Acceleration; // magnitude
     
     public Character(double[] position, double[] velocity, double acceleration)
     {
