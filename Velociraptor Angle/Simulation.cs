@@ -28,10 +28,10 @@ public class Simulation
             _injuredVelociraptor.CalculateNewVelocity(TimeStep, _fred);
             _injuredVelociraptor.CalculateNewPosition(TimeStep);
             _time += TimeStep;
-            Console.WriteLine("h" + Utilities.GetDistanceBetween(_fred, _healthyVelociraptor));
+            //Console.WriteLine("h" + Utilities.GetDistanceBetween(_fred, _healthyVelociraptor));
             //Console.WriteLine("x" + _healthyVelociraptor.Velocity[0] + " y" + _healthyVelociraptor.Velocity[1] + " ");
             // Console.WriteLine("i" + Utilities.GetDistanceBetween(_fred, _injuredVelociraptor));
-            //Console.WriteLine(double.RadiansToDegrees(_healthyVelociraptor.GetAngleTo(_fred)));
+            Console.WriteLine(double.RadiansToDegrees(_healthyVelociraptor.GetAngleTo(_fred)));
             //Console.WriteLine("x" + _fred.Position[0] + " y" + _fred.Position[1] + " ");
             if (_time > 10)
             {

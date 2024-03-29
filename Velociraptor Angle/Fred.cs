@@ -2,8 +2,8 @@
 
 public class Fred : Character
 {
-    private new const double Speed = 6;
-    public Fred (double StartingAngle) : base(new double[] {0, 0}, new double[] {Speed * Math.Cos(StartingAngle), Speed * Math.Sin(StartingAngle)}, 0)
+    private const double Speed = 6;
+    public Fred (double startingAngle) : base(new double[] {0, 0}, new double[] {Speed * Math.Cos(startingAngle), Speed * Math.Sin(startingAngle)}, 0)
     {
         
     }
