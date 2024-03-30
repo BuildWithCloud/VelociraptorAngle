@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Simulation simulation = new Simulation();
+        var simulation = new Simulation();
         Console.WriteLine(simulation.Simulate());
     }
 }

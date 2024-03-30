@@ -2,9 +2,9 @@
 
 public class Simulation
 {
-    private Fred _fred;
-    private InjuredVelociraptor _injuredVelociraptor;
-    private HealthyVelociraptor _healthyVelociraptor;
+    private readonly Fred _fred;
+    private readonly InjuredVelociraptor _injuredVelociraptor;
+    private readonly HealthyVelociraptor _healthyVelociraptor;
     private double _time;
     private const double TimeStep = 0.00001;
     private const double Precision = 0.1;

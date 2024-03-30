@@ -1,8 +1,3 @@
 ﻿namespace Velociraptor_Angle;
 
-public class InjuredVelociraptor : Velociraptor
-{
-    public InjuredVelociraptor(double[] position) : base(position, 10)
-    {
-    }
-}
+public class InjuredVelociraptor(double[] position) : Velociraptor(position, 10);
