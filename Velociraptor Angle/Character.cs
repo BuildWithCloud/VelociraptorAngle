@@ -1,18 +1,11 @@
 ﻿namespace Velociraptor_Angle;
 
-public abstract class Character
+public abstract class Character(double[] position, double[] velocity, double acceleration)
 {
-    public double[] Position; // x, y
-    public double[] Velocity; // x, y
-    public double Acceleration; // magnitude
-    
-    public Character(double[] position, double[] velocity, double acceleration)
-    {
-        Position = position;
-        Velocity = velocity;
-        Acceleration = acceleration;
-    }
-    
+    public double[] Position = position; // x, y
+    protected double[] Velocity = velocity; // x, y
+    protected readonly double Acceleration = acceleration; // magnitude
+
     public double GetAngleTo (Character target)
     {
         var dx = target.Position[0] - Position[0];
