@@ -22,11 +22,11 @@ public class Simulation(double startingAngle, double timeStep, double precision)
         }
         if (Utilities.GetDistanceBetween(_fred, _healthyVelociraptor) < precision)
         {
-            return new ReturnFromSim(_time, WhoWon.Healthy);
+            return new ReturnFromSim(_time, WhoWon.Healthy, Utilities.GetDistanceBetween(_fred, _injuredVelociraptor) - Utilities.GetDistanceBetween(_fred, _healthyVelociraptor));
         }
         else
         {
-            return new ReturnFromSim(_time, WhoWon.Injured);
+            return new ReturnFromSim(_time, WhoWon.Injured, Utilities.GetDistanceBetween(_fred, _healthyVelociraptor) - Utilities.GetDistanceBetween(_fred, _injuredVelociraptor));
         }
     }
 
