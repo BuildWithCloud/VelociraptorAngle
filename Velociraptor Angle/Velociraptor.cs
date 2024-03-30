@@ -9,9 +9,9 @@ public class Velociraptor(double[] position, double maxSpeed) : Character(positi
     public override void CalculateNewVelocity(double timeStep, Character target)
     {
         var angle = GetAngleTo(target);
-        var newVelocity = Utilities.GetMagnitude(Velocity) + Acceleration * timeStep;
-        if(newVelocity > maxSpeed)  newVelocity = maxSpeed; 
+        var speed = Utilities.GetMagnitude(Velocity) + Acceleration * timeStep;
+        if(speed > maxSpeed)  speed = maxSpeed; 
     
-        Velocity = new double[] {newVelocity * Math.Cos(angle), newVelocity * Math.Sin(angle)};
-        }
+        Velocity = new double[] {speed * Math.Cos(angle), speed * Math.Sin(angle)};
+    }
 }
